@@ -27,8 +27,8 @@ jobs:
       - name: Run markdown lint
         run: |
           npm install remark-cli remark-preset-lint-consistent
-          remark . --use remark-present-lint-consistent
-      # remark-preset-lint-recommended remark-lint-list-item-indent --save-dev
+      # - check: remark . --use remark-present-lint-consistent
+      # npx remark . --use remark-preset-lint-consistent --frail
           
       - uses: actions/upload-artifact@main
         with:
