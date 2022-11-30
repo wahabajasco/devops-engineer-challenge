@@ -24,9 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3.0.1
-
-      # Runs a single command using the runners shell
-       - name: Run markdownlint (mdl)
+      - name: Run markdown lint
         run: |
           npm install remark-cli remark-present-lint-consistent
           npx remark . --use remark-present-lint-consistent --frail
